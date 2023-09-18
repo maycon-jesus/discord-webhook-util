@@ -35,7 +35,7 @@ export type EmbedType = Partial<{
     author: {
         text: string,
         icon_url?: string,
-        proxy_icon_url: string
+        proxy_icon_url?: string
     },
     fields: {
         name: string,
