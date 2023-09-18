@@ -1,0 +1,23 @@
+name: Publish package
+run-name: Publish package
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: MontyD/package-json-updated-action
+        id: version-updated
+        with:
+          path: package.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ncipollo/release-action@v1
+        if: steps.version-updated.outputs.has-updated
+        with:
+          generateReleaseNotes: true
+          tag: "v${{ steps.version-updated.outputs.current-package-version }}"
