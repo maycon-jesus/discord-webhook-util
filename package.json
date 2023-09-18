@@ -1,6 +1,6 @@
 {
   "name": "discord-webhook-util",
-  "version": "$GITHUB_REF",
+  "version": "0.2.7",
   "description": "Discord webhooks util",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
