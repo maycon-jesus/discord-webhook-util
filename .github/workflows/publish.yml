@@ -9,8 +9,20 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     environment: Production
+
+    permissions:
+      actions: write
+      contents: write
+
     steps:
       - uses: actions/checkout@v3
+
+      - name: Bump Version Package Json
+        uses: ramonpaolo/bump-version@v2.3.1
+        with:
+          tag: $GITHUB_REF
+          commit: true
+
       - uses: actions/setup-node@v3
         with:
           node-version: '18.x'
