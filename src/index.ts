@@ -7,7 +7,7 @@ export type Webhooks = Record<string, string[]>
 let webhooksRegistred: Webhooks = {}
 let actualQueueEnd = 0
 
-export function registerWebhook(category: string, url: string): void {
+export function registerWebhookInCategory(category: string, url: string): void {
     if (webhooksRegistred[category]) {
         webhooksRegistred[category].push(url)
     } else {
@@ -63,7 +63,7 @@ function makeWebhookMessageBody(messageOptions: MessageOpts, accountOptions: Acc
     return bodys
 }
 
-export async function sendMessage(toCategory: string[] | string, messageData: MessageOpts, webhookAccountData?: AccountOpts) {
+export async function sendMessageToCategory(toCategory: string[] | string, messageData: MessageOpts, webhookAccountData?: AccountOpts) {
     const categories: string[] = []
 
     if (Array.isArray(toCategory)) {
