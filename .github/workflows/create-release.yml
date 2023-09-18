@@ -10,14 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: JiPaix/package-json-updated-action@v1.0.4
+      - uses: beaconbrigade/package-json-version@v0.3
         id: version-updated
         with:
           path: package.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - uses: ncipollo/release-action@v1
-        if: steps.version-updated.outputs.has-updated
         with:
           generateReleaseNotes: true
-          tag: "v${{ steps.version-updated.outputs.current-package-version }}"
+          tag: "v${{ steps.version-updated.outputs.version }}"
