@@ -35,6 +35,8 @@ function makeWebhookMessageBody(messageOptions: MessageOpts, accountOptions: Acc
             messageOptionsClone.embeds = messageOptions.embeds.slice(i * 10, i * 10 + 10)
             messagesOptions.push(messageOptionsClone)
         }
+    }else{
+        messagesOptions.push(messageOptions)
     }
 
     for (const messageOptions of messagesOptions) {
