@@ -12,19 +12,19 @@ export type EmbedType = Partial<{
     },
     image: {
         url: string,
-        proxy_url: string,
+        proxy_url?: string,
         height?: number,
         width?: number
     },
     thumbnail: {
         url: string,
-        proxy_url: string,
+        proxy_url?: string,
         height?: number,
         width?: number
     },
     video: {
         url: string,
-        proxy_url: string,
+        proxy_url?: string,
         height?: number,
         width?: number
     },
