@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: MontyD/package-json-updated-action
+      - uses: MontyD/package-json-updated-action@v1
         id: version-updated
         with:
           path: package.json
