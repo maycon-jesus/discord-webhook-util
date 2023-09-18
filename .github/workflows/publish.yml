@@ -20,7 +20,7 @@ jobs:
       - name: Bump Version Package Json
         uses: ramonpaolo/bump-version@v2.3.1
         with:
-          tag: ${{ github.ref }}
+          tag: ${{ github.ref_name }}
           commit: true
 
       - uses: actions/setup-node@v3
