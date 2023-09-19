@@ -1,6 +1,6 @@
 {
   "name": "discord-webhook-util",
-  "version": "",
+  "version": "0.3.0",
   "description": "Discord webhooks util",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
