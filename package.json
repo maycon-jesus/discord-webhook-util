@@ -1,13 +1,17 @@
 {
   "name": "discord-webhook-util",
-  "version": "0.2.9",
+  "version": "",
   "description": "Discord webhooks util",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
-  "keywords": ["discord", "webhook", "webhooks"],
+  "keywords": [
+    "discord",
+    "webhook",
+    "webhooks"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
