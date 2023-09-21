@@ -12,7 +12,11 @@
     "webhook",
     "webhooks"
   ],
-  "author": "",
+  "author": {
+    "name": "Maycon Jesus",
+    "email": "contato@mayconjesus.dev",
+    "url": "https://mayconjesus.dev/contato"
+  },
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.2.2"
