@@ -8,6 +8,9 @@ let webhooksRegistred: Webhooks = {}
 let actualQueueEnd = 0
 
 export function registerWebhookInCategory(category: string, url: string): void {
+    if(!category) throw new Error('Category name is empty')
+    if(!url) throw new Error('Webhook url is empty')
+
     if (webhooksRegistred[category]) {
         webhooksRegistred[category].push(url)
     } else {
